@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
-#include "laboratorio.h"
+#include "laboratorio.cpp"
+#include "computadora.cpp"
 using namespace std;
 
 main(){
