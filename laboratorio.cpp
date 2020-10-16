@@ -14,15 +14,13 @@ void laboratorio::capturar_final(const computadora &c){
 	}
 }
 void laboratorio::mostrar_elementos(){
-	cout<<left;
-	cout<<setw(19)<<"Sistema Operativo";
-	cout<<setw(19)<<"Tarjeta Grafica";
-	cout<<setw(10)<<"Precio";
-	cout<<setw(17)<<"Cantidad de Ram"<<endl;
 	for(size_t i=0;i<cont;i++){
-		computadora &c=arreglo[i];
-		cout<<c;
-		cout<<"\n";
+	computadora &c=arreglo[i];
+	cout<<"Sistema Operativo: "<<c.get_sistema_operativo()<<endl;
+	cout<<"Tarjeta Grafica: "<<c.get_tarjeta_grafica()<<endl;
+	cout<<"Cantidad de Ram: "<<c.get_cantidad_ram()<<endl;
+	cout<<"Precio Total: "<<c.get_precio_pc()<<endl;
+	cout<<"\n";
 	}
 	
 }

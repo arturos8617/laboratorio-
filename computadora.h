@@ -2,7 +2,7 @@
 #define COMPUTADORA_H
 
 #include <iostream>
-#include <iomanip>
+#include <cstdlib>
 
 using namespace std;
 
@@ -25,26 +25,6 @@ class computadora{
 		double get_precio_pc();
 		void set_cantidad_ram(int v);
 		int get_cantidad_ram();
-		friend ostream& operator<<(ostream &out,const computadora &p){
-			out<<left;
-			out<<setw(19)<<p.sistema_operativo;
-			out<<setw(19)<<p.tarjeta_grafica;
-			out<<setw(10)<<p.precio_pc;
-			out<<setw(17)<<p.cantidad_ram;
-			
-			return out;
-		}
-		friend istream& operator>>(istream &in, computadora &p){
-			cout<<"Sistema Operativo: ";
-			getline(cin,p.sistema_operativo);
-			cout<<"Tarjeta Grafica: ";
-			getline(cin,p.tarjeta_grafica);
-			cout<<"Precio: ";
-			cin>>p.precio_pc;
-			cout<<"Cantida de Ram: ";
-			cin>>p.cantidad_ram;
-			return in;
-		}
 };
 
 #endif
