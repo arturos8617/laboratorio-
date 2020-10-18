@@ -12,5 +12,13 @@ class laboratorio{
 		laboratorio();
 		void capturar_final(const computadora &c);
 		void mostrar_elementos();
+		void respaldar_tabla();
+		void respaldar();
+		void recuperar();
+		friend laboratorio& operator<<(laboratorio &l, const computadora &c)
+		{
+			l.capturar_final(c);
+			return l;
+		}
 };
 #endif
